@@ -1,0 +1,14 @@
+{
+  "name": "matrix-rain-bench",
+  "private": true,
+  "type": "module",
+  "description": "Standalone Canvas2D (CPU) vs WebGL2 (GPU) benchmark for the Matrix Rain, sharing the app's simulation core.",
+  "scripts": {
+    "build": "node build.mjs",
+    "bench": "node run-benchmark.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "playwright": "^1.56.0"
+  }
+}
