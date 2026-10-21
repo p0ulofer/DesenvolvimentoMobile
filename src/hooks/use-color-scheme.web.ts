@@ -8,6 +8,10 @@ export function useColorScheme() {
   const [hasHydrated, setHasHydrated] = useState(false);
 
   useEffect(() => {
+    // Pre-existing Expo template code. The hydration flag must flip on the client after
+    // the first paint of a statically rendered page, so a setState in an effect is correct
+    // here; the React Compiler rule cannot express that intent.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHasHydrated(true);
   }, []);
 
